@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <title>
+           doc
+        </title>
+    </head>
+    <body>
+     <script>
+product =[
+    {category:"shoes", brand :"nike", id : 100, name : "jordan",cost : 1000,discount : 10,rating : 1},
+    {category:"shoes", brand :"nike", id : 106, name : "jordan",cost : 10000,discount : 10,rating : 5},
+    {category:"laptop", brand :"Dell", id : 101, name : "inspiron",cost : 10000,discount : 20 ,rating : 2},
+    {category:"tshirts", brand :"nike", id : 102, name : "air",cost : 2000,discount : 30 ,rating : 3},
+    {category:"jeans", brand :"levi's", id : 103, name : "slim-fit",cost : 3000,discount : 40,rating : 4},
+    {category:"jackets", brand :"nike", id : 104, name : "warmer",cost : 5000,discount : 50,rating : 5},
+    {category:"watches", brand :"fossil", id : 105, name : "lux",cost : 8000,discount : 60,rating : 4},
+     ] 
+
+     var input= prompt("Enter 1 to  sort by price high to low , Enter 2 to sort by price low to high , Enter 3 to sort by rating , Enter 4 to sort by discount high to low , Enter 5 to sort buy discount low to high");
+         if(input == 1){
+
+         
+             product.sort(function(a,b) {
+    if(a.cost==b.cost){
+        return 0;
+
+    }
+    else if(a.cost>b.cost){
+        return -1;
+    }
+    else{
+        return 1;
+    }
+});
+
+console.log(product);
+          
+             
+         }
+      else   if(input == 2){
+
+         
+product.sort(function(a,b) {
+if(a.cost==b.cost){
+return 0;
+
+}
+else if(a.cost>b.cost){
+return 1;
+}
+else{
+return -1;
+}
+});
+
+console.log(product);
+
+
+}
+else if(input == 3){
+
+         
+product.sort(function(a,b) {
+if(a.rating==b.rating){
+return 0;
+
+}
+else if(a.rating>b.rating){
+return -1;
+}
+else{
+return 1;
+}
+});
+
+console.log(product);
+
+
+}
+else if(input == 4){
+
+         
+product.sort(function(a,b) {
+if(a.discount==b.discount){
+return 0;
+
+}
+else if(a.discount>b.discount){
+return -1;
+}
+else{
+return 1;
+}
+});
+
+console.log(product);
+
+
+}
+else if(input == 5){
+
+         
+product.sort(function(a,b) {
+if(a.discount==b.discount){
+return 0;
+
+}
+else if(a.discount>b.discount){
+return 1;
+}
+else{
+return -1;
+}
+});
+
+console.log(product);
+
+
+}
+else {
+    alert ("invalid choice"); 
+}
+var input = prompt("Enter your choice  1 : to show by Category, 2 : to show by brand , 3: to show product name" )   ;
+      if (input == 1){
+         var catinput = prompt("Enter category  1 for shoes , 2 for laptop , 3 for tshirts , 4 for jeans , 5 for jackets , 6 for watches");
+          if(catinput == 1){
+                        
+              catarr = product.filter( function (e){
+                  return e.category=="shoes";
+
+
+              });
+                console.log(catarr);  
+                 
+          }
+          if(catinput == 2){
+                        
+                        catarr = product.filter( function (e){
+                            return e.category=="laptop";
+          
+          
+                        });
+                          console.log(catarr);  
+                           
+                    }
+                    if(catinput == 3){
+                        
+                        catarr = product.filter( function (e){
+                            return e.category=="tshirts";
+          
+          
+                        });
+                          console.log(catarr);  
+                           
+                    }
+                    if(catinput == 4){
+                        
+                        catarr = product.filter( function (e){
+                            return e.category=="jeans";
+          
+          
+                        });
+                          console.log(catarr);  
+                           
+                    }
+                    if(catinput == 5){
+                        
+                        catarr = product.filter( function (e){
+                            return e.category=="jackets";
+          
+          
+                        });
+                          console.log(catarr);  
+                           
+                    }
+                    if(catinput == 6){
+                        
+                        catarr = product.filter( function (e){
+                            return e.category=="watches";
+          
+          
+                        });
+                          console.log(catarr);  
+                           
+                    }
+          
+      }    
+      else if( input == 2){
+          var brandinput = prompt("Enter  1 for nike ")
+          brandarr = product.filter(function (e){
+              return e.brand == "nike";
+          }); 
+          console.log(brandarr); 
+      }
+      else if(input == 3){
+          var nameinput = prompt("Enter product name : jordan ");
+          if (nameinput == "jordan"){
+            namearr = product.filter(function (e){
+              return e.name == "jordan";
+          }); 
+          console.log(namearr); 
+          }
+
+      }
+      else{
+          alert("invalid choice");
+      }
+    </script>   
+    
+    
+</body>
+
+</html>
